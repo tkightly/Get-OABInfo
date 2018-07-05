@@ -1,7 +1,7 @@
 Param (
-    [array]$ComputerName = $env:computername
+    [array]$ComputerName = $env:computername,
     [parameter(Mandatory=$true)]
-    [string]$using:OABGuid
+    [string]$OABGuid
 )
 function Get-OABInfo () {
     New-PSDrive -PSProvider Registry -Name HKU -Root HKEY_USERS | Out-Null
